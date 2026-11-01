@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  ============================================================
+  TEMA — extraído da logo e do flyer enviados pelo ateliê
+  (cores medidas nas imagens; formato "R G B").
+  - bg        #FAF5F1  fundo creme da logo (a logo se funde com ele)
+  - soft      rosa claro do flyer
+  - accent    #C9A45C  dourado da logo (só detalhes decorativos)
+  - brand     #D6336C  rosa dos botões: o rosa vibrante do flyer
+                       (#F6296C) escurecido para o texto branco ficar legível
+  - logo pink #E2969E  rosa da palavra "Sonhare" (use em fundos/detalhes)
+  ============================================================
+*/
+:root {
+  --bg: 250 245 241;
+  --surface: 255 255 255;
+  --ink: 58 42 46;
+  --muted: 115 99 104;
+  --line: 238 224 220;
+  --brand: 214 51 108;
+  --brand-dark: 176 37 88;
+  --soft: 249 232 233;
+  --accent: 201 164 92;
+
+  /* Fontes de sistema: rápidas e sem dependência externa.
+     Para fonte da marca, veja o README. */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--brand));
+  outline-offset: 2px;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
